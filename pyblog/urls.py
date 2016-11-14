@@ -19,5 +19,5 @@ from pyblog.views import index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('^index/',index),
+    url('',index),#default page
 ]
