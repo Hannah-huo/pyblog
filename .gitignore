@@ -4,3 +4,4 @@
 
 *.pyc
 /blog/migrations/*
+/org.eclipse.core.resources.prefs
