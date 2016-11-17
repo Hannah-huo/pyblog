@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from blog.views import index, signin
+from blog.views import index, signin, process_signin,signup
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('index/',index),#default page
-    url('signin/',signin),
+    url('index/', index),#default page
+    url('signin/', signin),
+    url('process_signin/', process_signin),
+    url('signup', signup),
 ]

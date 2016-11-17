@@ -2,11 +2,12 @@
 {% load static %}
 {% block main %}
 <div class="container">
-	<div class='col-lg-2 col-lg-offset-5 sign-logo'>
-		<img src="{% static 'images/favicon.ico' %}" alt='Pyblog'>
+	<div class='sign-logo'>
+		<a href='/index'><img src="{% static 'images/favicon.ico' %}" alt='Pyblog'></a>
 	</div>
 	<div class="form-signin">
-		<form role="form" id="signin">
+		<form role="form" method="post" action="/process_signin">
+			{% csrf_token %}
 			<h2 class="form-signin-heading">Please sign in</h2>
 			<input type="email" class="form-control" placeholder="Email address"
 				required autofocus> <input type="password"
@@ -18,14 +19,9 @@
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 			<section>
-				Not have an account yet? <a href='javascript:void(0)' onclick="show_signup()">Sign up</a>
+				Not have an account yet? <a href='/signup'>Sign up</a>
 			</section>
 		</form>
 	</div>
-	<script>
-	function show_signup(){
-		
-	}
-	</script>
 </div>
 {% endblock %}

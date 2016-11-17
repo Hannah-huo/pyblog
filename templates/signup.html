@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+	<div class="container">
+		<div class="form-signup ">
+			<form role="form" class="" method="post" action="process_signup">
+				{% csrf_token %}
+				<h2 class="form-signin-heading">Join pyblog</h2>
+				<input type="text" class="form-control" placeholder="Username"
+					required autofocus> 
+				<input type="email" class="form-control" placeholder="Email address"
+					required autofocus> 
+				<input type="password"
+					class="form-control" placeholder="Password" required>
+				<p>Use at least one lowercase letter, one numeral, and seven characters.</p>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Create an account	</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}
